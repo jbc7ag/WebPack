@@ -1,0 +1,21 @@
+{
+  "name": "webpack-example",
+  "version": "1.0.0",
+  "description": "Lerning how to configure WebpPack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack index.js --output build.js --mode development",
+    "build:local":"webpack",
+    "build:external":"webpack --config ./external/webpack.config.js"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Jessica B",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
