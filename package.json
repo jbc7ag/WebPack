@@ -21,7 +21,12 @@
     "build:sass": "webpack --config ./sass-loader/webpack.config.js",
     "build:stylus": "webpack --config ./stylus-loader/webpack.config.js",
     "build:less": "webpack --config ./less-loader/webpack.config.js",
-    "build:postcss": "webpack --config ./postcss-loader/webpack.config.js"
+    "build:postcss": "webpack --config ./postcss-loader/webpack.config.js",
+    "build:prevent": "webpack --config ./prevent-code/webpack.config.js",
+    "build:vendor": "webpack --config ./vendor/webpack.config.js",
+    "build:dll": "webpack --config ./dll/webpack.dll.config.js",
+    "build:dll:src": "webpack --config ./dll/webpack.config.js"
+
   },
   "keywords": [
     "webpack"
