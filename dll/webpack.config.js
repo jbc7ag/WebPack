@@ -1,11 +1,12 @@
 const path=require('path');
 //const ExtractTextPlugin=require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack=require('webpack');
 
 module.exports={
     mode: 'development',
     entry: {
-       vendor:['react','react-dom'],
+      // vendor:['react','react-dom'],
        home: path.resolve(__dirname,'src/js/index.js'),
        contact: path.resolve(__dirname,'src/js/contact.js')
     },
@@ -142,11 +143,15 @@ module.exports={
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
             chunkFilename: "[id].css"
-        })
+        }),
        
+        new webpack.DllReferencePlugin({
+
+            manifest:require('./modules-manifest.json')
+        })
            // new ExtractTextPlugin("css/estilos.css")
         //Aqui ponemos los plugins
-    ],
+    ]/*,
    optimization:{
 
         splitChunks:{
@@ -159,5 +164,5 @@ module.exports={
                 }
             }
         }
-    }
+   }*/
 }
